@@ -1,0 +1,21 @@
+{
+  "name": "commit-kanbanize",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:pqdluiz/commit-kanbanize.git",
+  "author": "Luiz Lima <luizpaulo78pqd@gmail.com>",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "commitlint": "^18.6.1"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11"
+  }
+}
