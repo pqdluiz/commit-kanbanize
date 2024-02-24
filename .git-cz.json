@@ -1,4 +1,4 @@
 {
-  "disableEmoji": false,
-  "format": "kanbanize-{kanbanize_id} {type}{scope}: {emoji}{subject}"
+  "disableEmoji": true,
+  "format": "kanbanize-{kanbanizeId} {type}{scope}: {emoji}{subject}"
 }

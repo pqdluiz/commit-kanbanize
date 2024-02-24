@@ -14,6 +14,7 @@
   "homepage": "https://github.com/streamich/git-cz",
   "license": "Unlicense",
   "scripts": {
+    "dev": "npx nodemon run.js",
     "lint": "yarn eslint",
     "clean": "rimraf dist binaries",
     "build": "yarn build:cli && yarn build:cz",
@@ -85,5 +86,8 @@
       "@semantic-release/changelog",
       "@semantic-release/git"
     ]
+  },
+  "dependencies": {
+    "nodemon": "^3.1.0"
   }
 }
