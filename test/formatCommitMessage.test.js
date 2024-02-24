@@ -12,7 +12,16 @@ const defaultConfig = {
   list: ['test', 'feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'ci', 'perf'],
   maxMessageLength: 64,
   minMessageLength: 3,
-  questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
+  questions: [
+    'type',
+    'scope',
+    'subject',
+    'body',
+    'breaking',
+    'issues',
+    'kanbanizeId',
+    'lerna'
+  ],
   scopes: [],
   types: {
     chore: {
@@ -73,6 +82,7 @@ const defaultState = {
     body: '',
     breaking: '',
     issues: '',
+    kanbanizeId: '343345',
     lerna: '',
     scope: '',
     subject: 'First commit',
