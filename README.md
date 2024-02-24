@@ -77,6 +77,7 @@ CLI parameters:
 - `--body`
 - `--breaking`
 - `--issues`
+- `--kanbanizeId`
 - `--lerna`
 
 ## Disable Emoji
