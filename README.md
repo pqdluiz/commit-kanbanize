@@ -153,6 +153,12 @@ The subject contains succinct description of the change:
 Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
 The body should include the motivation for the change and contrast this with previous behavior.
 
+### Example of the commit
+
+```
+kanbanize-454545 docs: Change docs to kanbanize format
+```
+
 #### Affects [only on [lerna](https://lernajs.io/) environments]
 
 Select the packages the commit affected.
