@@ -1,5 +1,5 @@
 {
-  "name": "git-cz",
+  "name": "commit-kanbanize",
   "version": "4.8.0",
   "description": "Semantic emojified git commit, git-cz.",
   "main": "dist/cz.js",
@@ -7,11 +7,6 @@
     "git-cz": "./bin/git-cz.js",
     "gitcz": "./bin/git-cz.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/streamich/git-cz.git"
-  },
-  "homepage": "https://github.com/streamich/git-cz",
   "license": "Unlicense",
   "scripts": {
     "dev": "npx nodemon run.js",
