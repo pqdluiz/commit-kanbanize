@@ -1,18 +1,27 @@
 on:
   push:
     branches:
-      - '**'
+      - main
+      - develop
+      - 'feature/**'
+      - 'fix/**'
+      - 'release/**'
     paths-ignore:
       - '**/*.md'
-      - '.scafflater/**'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - .github/**
+      - .scafflater/**
   pull_request:
     branches:
       - main
     paths-ignore:
       - '**/*.md'
-      - '.scafflater/**'
-
-workflow_dispatch:
+      - '**/*.yml'
+      - '**/*.yaml'
+      - .github/**
+      - .scafflater/**
+  workflow_dispatch:
 
 name: package-kanbanize
 
