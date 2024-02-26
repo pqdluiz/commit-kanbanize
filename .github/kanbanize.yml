@@ -1,53 +1,54 @@
 on:
-   push:
-      branches:
-         - "main/**"
-   pull_request:
-      branches:
-         - "main/**"
-      paths-ignore:
-         - "**/*.md"
-         - "**/*.yml"
-         - "**/*.yaml"
-         - .github/**
-         - "**/*.md"
-   workflow_dispatch:
+  push:
+    branches:
+      - '**'
+    paths-ignore:
+      - '**/*.md'
+      - '.scafflater/**'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '.scafflater/**'
+
+workflow_dispatch:
 
 name: package-kanbanize
 
 env:
-   app_name: "commit-kanbanize"
-   app_suffix: "kanbanize"
+  app_name: 'commit-kanbanize'
+  app_suffix: 'kanbanize'
 
 jobs:
-   build:
-      runs-on: ubuntu-latest
-      steps:
-         - name: Checkout
-           uses: actions/checkout@v3
-         - name: Setup Node
-           uses: actions/setup-node@v3
-           with:
-              node-version: 16
-              cache: npm
-         - name: Install Hooks
-           run: npm install -g husky
-         - name: Install Dependencies
-           run: npm install
-   publish-gpr:
-      needs: build
-      runs-on: ubuntu-latest
-      permissions:
-         packages: write
-         contents: read
-      steps:
-         - uses: actions/checkout@v3
-         - uses: actions/setup-node@v3
-           with:
-              node-version: 16
-              registry-url: https://npm.pkg.github.com/
-         - run: npm i -g husky
-         - run: npm install
-         - run: npm publish --tag next
-           env:
-              NODE_AUTH_TOKEN: ${{secrets.APP_GITHUB_NAME}}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+      - name: Install Hooks
+        run: npm install -g husky
+      - name: Install Dependencies
+        run: npm install
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm i -g husky
+      - run: npm install
+      - run: npm publish --tag next
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.APP_GITHUB_NAME}}
