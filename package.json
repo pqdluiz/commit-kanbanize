@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "npx nodemon run.js",
     "lint": "yarn eslint",
+    "commit": "npx git-cz",
     "clean": "rimraf dist binaries",
     "build": "yarn build:cli && yarn build:cz",
     "build:cli": "browserify --node -o dist/cli.js lib/cli.js",
