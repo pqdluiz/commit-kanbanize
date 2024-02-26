@@ -38,7 +38,7 @@ jobs:
           node-version: 18
           cache: yarn
       - name: Install Hooks
-        run: yarn install -g husky
+        run: yarn global add husky
       - name: Install Dependencies
         run: yarn install
   publish-gpr:
