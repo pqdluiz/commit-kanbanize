@@ -8,6 +8,10 @@
     "gitcz": "./bin/git-cz.js"
   },
   "license": "Unlicense",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
   "scripts": {
     "dev": "npx nodemon run.js",
     "lint": "yarn eslint",
