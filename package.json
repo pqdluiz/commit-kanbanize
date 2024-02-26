@@ -9,8 +9,8 @@
   },
   "license": "Unlicense",
   "engines": {
-    "node": ">=18",
-    "npm": ">=9"
+    "node": "16",
+    "npm": "9"
   },
   "scripts": {
     "dev": "npx nodemon run.js",
