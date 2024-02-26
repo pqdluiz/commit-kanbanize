@@ -8,9 +8,6 @@ on:
       - 'release/**'
     paths-ignore:
       - '**/*.md'
-      - '**/*.yml'
-      - '**/*.yaml'
-      - .github/**
       - .scafflater/**
   pull_request:
     branches:
