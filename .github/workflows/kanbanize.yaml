@@ -37,8 +37,6 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-      - name: Install Hooks
-        run: yarn global add husky
       - name: Install Dependencies
         run: yarn install
   publish-gpr:
@@ -53,7 +51,6 @@ jobs:
         with:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
-      - run: yarn add -g husky
       - run: yarn install
       - run: yarn npm publish --tag next
         env:
