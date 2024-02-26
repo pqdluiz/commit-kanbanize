@@ -9,7 +9,7 @@
   },
   "license": "Unlicense",
   "engines": {
-    "node": "16",
+    "node": "18",
     "npm": "9"
   },
   "scripts": {
